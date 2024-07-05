@@ -27,6 +27,8 @@ services:
     build: ./
     volumes: 
       - .:/sim_ws/src/f1tenth_gym_ros
+      - ../f1tenth_lab1_ws/src/lab1_pkg:/sim_ws/src/lab1_pkg
+      - ../f1tenth_lab2_ws/safety_node:/sim_ws/src/safety_node
     environment:
       - DISPLAY=novnc:0.0
     networks:
