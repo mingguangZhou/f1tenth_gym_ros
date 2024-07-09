@@ -34,7 +34,11 @@ services:
     networks:
       - x11
     stdin_open: true
-    tty: true 
+    tty: true
+    cap_add:
+      - SYS_PTRACE  # Allow ptrace which is needed for GDB
+    security_opt:
+      - seccomp:unconfined  # Turn off seccomp filtering to allow more permissions for debugging 
   novnc:  
     image: theasp/novnc:latest
     environment:
