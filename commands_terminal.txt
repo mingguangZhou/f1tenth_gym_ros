@@ -1,0 +1,22 @@
+$ docker run -it --rm my-dev-container
+
+Re-enter and resume a running container: Use $ docker attach <container_id_or_name>.
+Start a stopped container: Use '$ docker start <container_id_or_name>' and then attach to it.
+Open a new shell session: Use $ docker exec -it <container_id_or_name> /bin/bash
+
+$ source /opt/ros/foxy/setup.bash
+$ source install/local_setup.bash
+
+source /opt/ros/foxy/setup.bash
+source install/local_setup.bash
+
+$ ros2 launch f1tenth_gym_ros gym_bridge_launch.py
+$ ros2 launch wall_follow wall_follow_launch.py
+$ ros2 run teleop_twist_keyboard teleop_twist_keyboard
+
+$ docker build -t f1tenth_gym_ros -f Dockerfile .
+$ docker-compose down
+$ docker-compose up --build
+$ docker exec -it f1tenth_gym_ros_sim_1 /bin/bash
+
+$ colcon build --packages-select my_py_pkg --symlink-install

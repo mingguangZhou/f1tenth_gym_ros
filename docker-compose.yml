@@ -30,6 +30,7 @@ services:
       - ../f1tenth_lab1_ws/src/lab1_pkg:/sim_ws/src/lab1_pkg
       - ../f1tenth_lab2_ws/safety_node:/sim_ws/src/safety_node
       - ../f1tenth_lab3_ws/wall_follow:/sim_ws/src/wall_follow
+      - ../f1tenth_lab4_ws/gap_follow:/sim_ws/src/gap_follow
     environment:
       - DISPLAY=novnc:0.0
     networks:
