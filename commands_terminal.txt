@@ -20,3 +20,10 @@ $ docker-compose up --build
 $ docker exec -it f1tenth_gym_ros_sim_1 /bin/bash
 
 $ colcon build --packages-select my_py_pkg --symlink-install
+$ colcon build --packages-select gap_follow
+$ ros2 run gap_follow reactive_node
+
+gdb example:
+$ colcon build --cmake-args -DCMAKE_BUILD_TYPE=Debug
+$ gdb /sim_ws/install/gap_follow/lib/gap_follow/reactive_node
+$ (gdb) run
