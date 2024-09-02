@@ -26,4 +26,6 @@ $ ros2 run gap_follow reactive_node
 gdb example:
 $ colcon build --cmake-args -DCMAKE_BUILD_TYPE=Debug
 $ gdb /sim_ws/install/gap_follow/lib/gap_follow/reactive_node
+$ gdb --args /sim_ws/install/gap_follow/lib/gap_follow/reactive_node --ros-args -r __node:=reactive_node --params-file /sim_ws/install/gap_follow/share/gap_follow/config/params.yaml
 $ (gdb) run
+
